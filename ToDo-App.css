@@ -1,0 +1,68 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 350px;
+}
+
+.todo h2 {
+  margin-bottom: 1rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+#taskInput {
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+
+#addBtn {
+  padding: 0.5rem 1rem;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#addBtn:hover {
+  background-color: #c0392b;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.5rem;
+  background: #f1f1f1;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
