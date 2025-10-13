@@ -1,23 +1,25 @@
+
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Todo-App</title>
-  <link rel="stylesheet" href="ToDo-App.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-App</title>
+    <link rel="stylesheet" href="ToDo-App.css">
 </head>
 <body>
-  <div class="container">
-    <div class="todo">
-      <h2>My Todo-lists</h2>
-      <div class="input-container">
-        <input type="text" id="taskInput" placeholder="Handla mjölk">
-        <button id="addBtn">Login</button>
-      </div>
-      <ul id="taskList"></ul>
-    </div>
-  </div>
 
-  <script src="ToDo-App.js"></script>
+    <div id="todo-app">
+        <h1 class="app-title">Todo App</h1>
+        <form id="todo-form" class="formStyle">
+            <input type="text" id="todo-input" placeholder="Lägg till en ny..." class="todo-input" />
+            <button type="submit" class="add-button">Lägg till</button>
+        </form>
+        <ul id="todo-list">
+            <!-- Todo items will be inserted here by JS -->
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
