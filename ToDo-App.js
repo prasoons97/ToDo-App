@@ -2,6 +2,8 @@ const todoForm = document.querySelector('#todo-form')
 const todoInput = document.querySelector('#todo-input')
 const todoList = document.querySelector('#todo-list')
 
+//console.log(todoForm, todoInput, todoList);
+
 const addTodo = text => {
 
     if (!text.trim()) {
@@ -16,6 +18,8 @@ const addTodo = text => {
 
 todoForm.addEventListener('submit', e => {
     e.preventDefault(); 
+
+    //console.log(todoInput.value);
 
     addTodo (todoInput.value);
 
