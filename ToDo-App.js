@@ -4,24 +4,40 @@ const todoList = document.querySelector('#todo-list')
 
 //console.log(todoForm, todoInput, todoList);
 
-const addTodo = text => {
+const addTodo = input => {
 
-    if (!text.trim()) {
+    if (!input.trim()) {
      return
 }
 
    const li = document.createElement('li')
+   const div = document.createElement('div')
+   const checkbox = document.createElement('input')
    const span = document.createElement('span')
    const deleteBtn = document.createElement('button')
 
-   span.textContent = Input
+   checkbox.type = 'checkbox'
+    checkbox.classList = 'custom-checkbox'
+
+   span.textContent = input
    span.classList = 'todo-text'
 
     deleteBtn.textContent = 'x'
    deleteBtn.classList = 'delete-button'
 
-   li.appendChild(span)
+   div.appendChild(checkbox)
+   div.appendChild(span)
+
+   li.appendChild(div)
     li.appendChild(deleteBtn)   
+
+    checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+            span.style.textDecoration = 'line-through'
+        } else {
+            span.style.textDecoration = 'none'
+        }
+    })
 
     deleteBtn.addEventListener('click', () => {
         li.remove();

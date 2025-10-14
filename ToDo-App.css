@@ -40,6 +40,7 @@ body {
 
 .todo-input:focus {
     border-color: rgb(0, 255, 0);
+    outline: none;
 }
 
 .add-button {
@@ -68,6 +69,7 @@ body {
     justify-content: space-between;
     align-items: center;
     
+    
 }
 
 .delete-button {
@@ -82,3 +84,74 @@ body {
 .delete-button:hover {
     color: red;
 }
+
+
+#todo-list li div{
+    display: flex;
+    align-self: center;
+    gap: 10px;
+}
+
+
+  .custom-checkbox {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 30px;
+  }
+
+  .custom-checkbox::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+  }
+
+  .custom-checkbox,
+  .custom-checkbox::after {
+    transition: all 100ms ease-out;
+  }
+
+  .custom-checkbox::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+  }
+
+  .custom-checkbox input[type=checkbox] {
+    cursor: default;
+  }
+
+  .custom-checkbox:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+  }
+
+  .custom-checkbox:checked {
+    background-color: #6e79d6;
+  }
+
+  .custom-checkbox:checked::after {
+    background-color: #fff;
+    left: 13px;
+  }
+
+  .custom-checkbox :focus:not(.focus-visible) {
+    outline: 0;
+  }
+
+  .custom-checkbox:checked:hover {
+    background-color: #535db3;
+  }
