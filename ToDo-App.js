@@ -11,7 +11,22 @@ const addTodo = text => {
 }
 
    const li = document.createElement('li')
-    li.textContent = todoInput.value
+   const span = document.createElement('span')
+   const deleteBtn = document.createElement('button')
+
+   span.textContent = Input
+   span.classList = 'todo-text'
+
+    deleteBtn.textContent = 'x'
+   deleteBtn.classList = 'delete-button'
+
+   li.appendChild(span)
+    li.appendChild(deleteBtn)   
+
+    deleteBtn.addEventListener('click', () => {
+        li.remove();
+    })
+
 
     todoList.appendChild(li);
 }
