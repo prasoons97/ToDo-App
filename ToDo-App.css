@@ -7,12 +7,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(244, 246, 248);
+    background-color: rgb(241, 245, 248);
     font-family: "inter", sans-serif;
 }
 
 #todo-app {
-    background-color: white;
+    background-color: rgb(237, 223, 223);
     padding: 2rem;
     border-radius: 0.75rem;
     max-width: 450px;
@@ -39,7 +39,7 @@ body {
 }
 
 .todo-input:focus {
-    border-color: rgb(0, 255, 0);
+    border-color: rgb(238, 137, 74);
     outline: none;
 }
 
