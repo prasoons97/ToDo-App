@@ -7,12 +7,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(241, 245, 248);
+    background-color: #f5dfd6;
     font-family: "inter", sans-serif;
 }
 
 #todo-app {
-    background-color: rgb(237, 223, 223);
+    background-color: rgb(194, 153, 153);
     padding: 2rem;
     border-radius: 0.75rem;
     max-width: 450px;
@@ -57,19 +57,35 @@ body {
 }
 
 #todo-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
+
 #todo-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.6rem;
+  transition: all 0.25s ease;
+  background: rgba(255, 255, 255, 0.1); /* subtle base */
+  backdrop-filter: blur(2px);
+}
+
+/* Hover effect for entire row */
+#todo-list li:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.15)
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
 }
 
 .delete-button {
