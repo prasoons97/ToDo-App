@@ -81,10 +81,9 @@ body {
     padding: 0.5rem 1rem;
     border: none;
 }
-.delete-button:hover {
-    color: red;
+li:hover .delete-button {
+  color: red;
 }
-
 
 #todo-list li div{
     display: flex;
@@ -140,7 +139,7 @@ body {
   }
 
   .custom-checkbox:checked {
-    background-color: #6e79d6;
+    background-color: rgb(187, 106, 7)
   }
 
   .custom-checkbox:checked::after {
@@ -153,5 +152,5 @@ body {
   }
 
   .custom-checkbox:checked:hover {
-    background-color: #535db3;
+    background-color: rgb(123, 69, 3)
   }

@@ -40,8 +40,10 @@ const addTodo = (input, isCompleted = false) => {
   checkbox.addEventListener("change", () => {
     if (checkbox.checked) {
       span.style.textDecoration = "line-through";
+      todoList.appendChild(li); // move to bottom
     } else {
       span.style.textDecoration = "none";
+      todoList.insertBefore(li, todoList.firstChild); // move back to top
     }
     saveTodos(); // save changes
   });
@@ -49,6 +51,11 @@ const addTodo = (input, isCompleted = false) => {
   deleteBtn.addEventListener("click", () => {
     li.remove();
     saveTodos(); // save changes
+  });
+
+  span.addEventListener("click", () => {
+    checkbox.checked = !checkbox.checked; // toggle
+    checkbox.dispatchEvent(new Event("change")); // trigger the same logic
   });
 
   todoList.appendChild(li);
@@ -67,9 +74,9 @@ todoForm.addEventListener("submit", (e) => {
 
 //NEW FUNCTION: Save todos to local storage
 const saveTodos = () => {
-  //Create an empty array that will will later hold my todo objects
+  //Create an empty array that will later hold todo objects
   const todosToSave = [];
-  //go through each <li> element under my <ul> and push towards my array
+  //go through each <li> element under <ul> and push towards my array
   todoList.querySelectorAll("li").forEach((li) => {
     const span = li.querySelector(".todo-text");
     const checkbox = li.querySelector(".custom-checkbox");
